@@ -10,39 +10,6 @@ public class DPP {
     public DPP(boolean isDone, String status) {
         this.isDone = isDone;
         this.status = status;
-        switch (status) {
-            case "1":
-                setStatusmessage("Aktif");
-                break;
-            case "2":
-                setStatusmessage("Tutup Sementara/Tidak Ada");
-                break;
-            case "3":
-                setStatusmessage("Kegiatan Belum Berproduksi");
-                break;
-            case "4":
-                setStatusmessage("Tidak Bersedia Diwawancarai");
-                break;
-            case "5":
-                setStatusmessage("Alih Usaha ke Non Pertanian");
-                break;
-            case "6":
-                setStatusmessage("Tutup");
-                break;
-            case "7":
-                setStatusmessage("Tidak Ditemukan");
-                break;
-            case "8":
-                setStatusmessage("Baru");
-                break;
-            case "9":
-                setStatusmessage("Ganda");
-                break;
-        
-            default:
-                setStatusmessage("error");
-                break;
-        }
     }
     public String getStatusmessage() {
         return statusmessage;
