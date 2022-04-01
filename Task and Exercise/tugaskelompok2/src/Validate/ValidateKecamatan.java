@@ -2,7 +2,7 @@ package Validate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ValidateKecamatan extends ValidateString {
+public class ValidateKecamatan extends Validate {
 
 
     @Override

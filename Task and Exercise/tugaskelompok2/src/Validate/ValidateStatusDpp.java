@@ -3,7 +3,7 @@ package Validate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ValidateStatusDpp extends ValidateString{
+public class ValidateStatusDpp extends Validate{
     @Override
     public boolean isValid(String kode) {
         try {

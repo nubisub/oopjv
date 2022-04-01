@@ -5,24 +5,21 @@ public class Kehutanan implements Usaha{
 
     public Kehutanan() {
     }
-
-    public Kehutanan(boolean kehutanan) {
-        this.Usaha = kehutanan;
-    }
     @Override
     public String getSubsector() {
         if (isUsaha() == true){
-            return "Kehutanan";
+            return "1";
         }
         else{
-            return "";
+            return "0";
         }
     }
     @Override
     public boolean isUsaha() {
         return this.Usaha;
     }
+    @Override
    public void setUsaha(boolean usaha) {
-       Usaha = usaha;
+       this.Usaha = usaha;
    }
 }

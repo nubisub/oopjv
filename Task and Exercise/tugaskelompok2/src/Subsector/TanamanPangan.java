@@ -3,27 +3,24 @@ package Subsector;
 public class TanamanPangan implements Usaha {
     private boolean Usaha;
 
-
     public TanamanPangan() {
     }
 
-    public TanamanPangan(boolean tanamanpangan) {
-        this.Usaha = tanamanpangan;
-    }
     @Override
     public String getSubsector() {
         if (isUsaha() == true){
-            return "Peternakan";
+            return "1";
         }
         else{
-            return "";
+            return "0";
         }
     }
     @Override
     public boolean isUsaha() {
         return this.Usaha;
     }
+    @Override
     public void setUsaha(boolean usaha) {
-        Usaha = usaha;
+        this.Usaha = usaha;
     }
 }

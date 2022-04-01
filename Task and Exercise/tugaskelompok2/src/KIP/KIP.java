@@ -13,14 +13,6 @@ public class KIP {
         this.Kec = new KodeKec();
         this.KJU = new KodeKJU();
     }
-    public KIP(KodeProv kodeProv, KodeKab kodeKab, KodeKec kodeKec, KodeKJU kodeKJU, int nourut) {
-        this.Prov = kodeProv;
-        this.Kab = kodeKab;
-        this.Kec = kodeKec;
-        this.KJU = kodeKJU;
-        this.nourut = nourut;
-        setKIP();
-    }
     public KodeProv getProv() {
         return Prov;
     }

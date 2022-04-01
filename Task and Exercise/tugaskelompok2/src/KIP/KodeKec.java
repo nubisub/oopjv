@@ -6,10 +6,6 @@ public class KodeKec implements Kode {
     public KodeKec() {
     }
 
-    public KodeKec(String kode) {
-        this.kode = kode;
-    }
-
     @Override
     public void setKode(String kode) {
         this.kode = kode;
@@ -18,12 +14,6 @@ public class KodeKec implements Kode {
     @Override
     public String getKode() {
         return this.kode;
-    }
-
-    @Override
-    public void validateKode() {
-        // TODO Auto-generated method stub
-        
     }
 
     @Override

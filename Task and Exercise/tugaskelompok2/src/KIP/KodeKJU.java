@@ -7,10 +7,6 @@ public class KodeKJU implements Kode{
     public KodeKJU() {
     }
 
-    public KodeKJU(String kode) {
-        this.kode = kode;
-    }
-
     @Override
     public void setKode(String kode) {
         this.kode = kode;
@@ -19,12 +15,6 @@ public class KodeKJU implements Kode{
     @Override
     public String getKode() {
         return this.kode;
-    }
-
-    @Override
-    public void validateKode() {
-        // TODO Auto-generated method stub
-        
     }
 
     @Override

@@ -2,20 +2,8 @@ package DPP;
 public class DPP {
     private boolean isDone;
     private String status;
-    private String statusmessage;
 
     public DPP() {
-    }
-    
-    public DPP(boolean isDone, String status) {
-        this.isDone = isDone;
-        this.status = status;
-    }
-    public String getStatusmessage() {
-        return statusmessage;
-    }
-    public void setStatusmessage(String statusmessage) {
-        this.statusmessage = statusmessage;
     }
     public String getStatus() {
         return status;
@@ -28,9 +16,9 @@ public class DPP {
     }
     public String getDone() {
         if (isDone) {
-            return "true";
+            return "1";
         } else {
-            return "false";
+            return "0";
         }
     }
 }

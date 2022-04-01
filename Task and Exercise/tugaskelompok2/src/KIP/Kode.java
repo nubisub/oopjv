@@ -4,5 +4,4 @@ public interface Kode {
     public void setKode(String kode);
     public String getKode();
     public String getNama();
-    public void validateKode();
 }

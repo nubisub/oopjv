@@ -1,7 +1,7 @@
 package Validate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-public class ValidateBoolean extends ValidateString {
+public class ValidateBoolean extends Validate {
 
     @Override
     public boolean isValid(String kode) {

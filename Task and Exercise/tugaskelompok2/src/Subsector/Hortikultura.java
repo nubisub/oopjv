@@ -5,25 +5,22 @@ public class Hortikultura implements Usaha {
 
     public Hortikultura() {
     }
-
-    public Hortikultura(boolean hortikultura) {
-        this.Usaha = hortikultura;
-    }
     @Override
     public String getSubsector() {
         if (isUsaha() == true){
-            return "Hortikultura";
+            return "1";
         }
         else{
-            return "";
+            return "0";
         }
     }
     @Override
     public boolean isUsaha() {
         return this.Usaha;
     }
+    @Override
     public void setUsaha(boolean usaha) {
-        Usaha = usaha;
+        this.Usaha = usaha;
     }
     
 }

@@ -4,29 +4,33 @@ import java.util.Scanner;
 
 import Perusahaan.Perusahaan;
 
-import Validate.ValidateString;
-import Validate.Validasitelphone;
+import Validate.Validate;
+import Validate.Validatephone;
 import Validate.ValidateBBH;
 import Validate.ValidateBoolean;
+import Validate.ValidateJenisUsahaUtama;
 import Validate.ValidateKJU;
 import Validate.ValidateKabupaten;
 import Validate.ValidateKecamatan;
 import Validate.ValidateNoUrut;
 import Validate.ValidatePerkebunan;
+import Validate.ValidateProv;
 import Validate.ValidateStatusDpp;
 
 public class Main {
     static void tampilMenu(ArrayList<Perusahaan> p) {
         boolean quit = false;
-        ValidateString Kec = new ValidateKecamatan();
-        ValidateString Kab = new ValidateKabupaten();
-        ValidateString KJU = new ValidateKJU();
-        ValidateString NoUrut = new ValidateNoUrut();
-        ValidateString telp = new Validasitelphone();
-        ValidateString biner = new ValidateBoolean();
-        ValidateString perkebunancheck = new ValidatePerkebunan();
-        ValidateString bbhcheck = new ValidateBBH();
-        ValidateString statuscheck = new ValidateStatusDpp();
+        Validate Kec = new ValidateKecamatan();
+        Validate Kab = new ValidateKabupaten();
+        Validate KJU = new ValidateKJU();
+        Validate NoUrut = new ValidateNoUrut();
+        Validate telp = new Validatephone();
+        Validate biner = new ValidateBoolean();
+        Validate perkebunancheck = new ValidatePerkebunan();
+        Validate bbhcheck = new ValidateBBH();
+        Validate statuscheck = new ValidateStatusDpp();
+        Validate Prov = new ValidateProv();
+        Validate jenisusahautama = new ValidateJenisUsahaUtama();
 
         do {
             System.out.println("Pilih kode yang ingin diinput");
@@ -43,9 +47,17 @@ public class Main {
                     Perusahaan p1 = new Perusahaan();
                     
                     // Kode Provinsi
-                    System.out.println("Kode Provinsi   : \n 31");
-                    String kodeProv = "";
-                    p1.getKip().getProv().setKode(kodeProv);
+                    System.out.println("Kode Identitas Perusahaan");
+                    while (true) {
+                        System.out.print("Kode Provinsi   : ");
+                        System.out.println("31");
+                        String kodeProv = "31";
+                        if (Prov.isValid(kodeProv)) {
+                            p1.getKip().getProv().setKode(kodeProv);
+                            break;
+                        }
+                    }
+
                     // Kode Kabupaten
                     do {
                         System.out.print("Kode Kabupaten  : ");
@@ -88,45 +100,10 @@ public class Main {
 
                 // Input Profil Perusahaan
                 // Nama Perusahaan
-                    System.out.println("Nama Perusahaan   : ");
-                    String nama = input.nextLine();
-                    p1.setNama(nama);
-                // Alamat Perusahaan
-                    System.out.println("Alamat Perusahaan : ");
-                    String alamat = input.nextLine();
-                    p1.setAlamat(alamat);
-                // Nomor Telepon Perusahaan
-                    do {
-                        System.out.println("No. Telepon       : ");
-                    String phone = input.nextLine();
-                        if (telp.isValid(phone)) {
-                            p1.setPhone(phone);
-                            break;
-                        }
-                    } while (true);
-                // Fax Perusahaan
-                    do {
-                        System.out.println("No. Faximile       : ");
-                    String fax = input.nextLine();
-                        if (telp.isValid(fax)) {
-                            p1.setFax(fax);
-                            break;
-                        }
-                    } while (true);
-                // BBH
-                    do {
-                        System.out.println("BBH               : ");
-                    String bbh = input.nextLine();
-                        if (bbhcheck.isValid(bbh)) {
-                            p1.setBBH(Integer.parseInt(bbh));
-                            break;
-                        }
-                    } while (true);
-
-
                 // DPP
+                System.out.println("Pencacahan Kuesioner Rutin/DPP");
                     do {
-                        System.out.println("Sudah Dikunjugni? (1/0) : ");
+                        System.out.print("Sudah Dikunjungi?  : ");
                     String isDone = input.nextLine();
                         if (biner.isValid(isDone)) {
                             p1.getDpp().setDone(Integer.parseInt(isDone) == 1 );
@@ -136,13 +113,52 @@ public class Main {
 
                 // Status DPP                    
                     do {
-                        System.out.println("Status         : ");
+                        System.out.print("Status         : ");
                     String status = input.nextLine();
                         if (statuscheck.isValid(status)) {
                             p1.getDpp().setStatus(status);
                             break;
                         }
                     } while (true);
+
+
+                    System.out.print("Nama Perusahaan   : ");
+                    String nama = input.nextLine();
+                    p1.setNama(nama);
+                // Alamat Perusahaan
+                    System.out.print("Alamat Perusahaan : ");
+                    String alamat = input.nextLine();
+                    p1.setAlamat(alamat);
+                // Nomor Telepon Perusahaan
+                    do {
+                        System.out.print("No. Telepon       : ");
+                    String phone = input.nextLine();
+                        if (telp.isValid(phone)) {
+                            p1.setPhone(phone);
+                            break;
+                        }
+                    } while (true);
+                // Fax Perusahaan
+                    do {
+                        System.out.print("No. Faximile       : ");
+                    String fax = input.nextLine();
+                        if (telp.isValid(fax)) {
+                            p1.setFax(fax);
+                            break;
+                        }
+                    } while (true);
+                // BBH
+                    do {
+                        System.out.print("BBH               : ");
+                    String bbh = input.nextLine();
+                        if (bbhcheck.isValid(bbh)) {
+                            p1.setBBH(Integer.parseInt(bbh));
+                            break;
+                        }
+                    } while (true);
+
+
+                
 
 
                 // Input Subsector
@@ -156,7 +172,7 @@ public class Main {
                     } while (true);
                     
                     do {
-                        System.out.println("Hortikultura : ");
+                        System.out.print("Hortikultura : ");
                         String hortikultura = input.nextLine();
                         if (biner.isValid(hortikultura)) {
                             p1.getSubsector().getHortikultura().setUsaha(Integer.parseInt(hortikultura) == 1);
@@ -165,7 +181,7 @@ public class Main {
                     } while (true);
 
                     do {
-                        System.out.println("Perkebunan : ");
+                        System.out.print("Perkebunan : ");
                         String perkebunan = input.nextLine(); 
                         if (perkebunancheck.isValid(perkebunan)) {
                             p1.getSubsector().getPerkebunan().setUsaha(perkebunan);
@@ -174,7 +190,7 @@ public class Main {
                     } while (true);
                     
                     do {
-                        System.out.println("Peternakan : ");
+                        System.out.print("Peternakan : ");
                     String peternakan = input.nextLine();
                         if (biner.isValid(peternakan)) {
                             p1.getSubsector().getPeternakan().setUsaha(Integer.parseInt(peternakan) == 1);
@@ -183,7 +199,7 @@ public class Main {
                     } while (true);
 
                     do {
-                        System.out.println("Kehutanan : ");
+                        System.out.print("Kehutanan : ");
                     String kehutanan = input.nextLine();
                         if (biner.isValid(kehutanan)) {
                             p1.getSubsector().getKehutanan().setUsaha(Integer.parseInt(kehutanan) == 1);
@@ -192,10 +208,19 @@ public class Main {
                     } while (true);
 
                     do {
-                        System.out.println("Perikanan : ");
+                        System.out.print("Perikanan : ");
                     String perikanan = input.nextLine();
                         if (biner.isValid(perikanan)) {
                             p1.getSubsector().getPerikanan().setUsaha(Integer.parseInt(perikanan) == 1);
+                            break;
+                        }
+                    } while (true);
+
+                    do {
+                        System.out.print("Jenis Usaha Utama: ");
+                    String jenisUsahaUtama = input.nextLine();
+                        if (jenisusahautama.isValid(jenisUsahaUtama)) {
+                            p1.setJenisUsahaUtama(jenisUsahaUtama);
                             break;
                         }
                     } while (true);
@@ -225,8 +250,11 @@ public class Main {
                     
                     System.out.println("Kehutanan : " + perusahaan.getSubsector().getKehutanan().getSubsector());
                     System.out.println("Perikanan : " + perusahaan.getSubsector().getPerikanan().getSubsector());
-                    System.out.println("\n");
+                    System.out.println("Jenis Usaha Utama : " + perusahaan.getJenisUsahaUtama());
                 }
+
+            
+
                     break;
                 case "3":
                     quit = true;  
