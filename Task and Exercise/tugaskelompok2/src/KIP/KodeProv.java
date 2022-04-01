@@ -3,6 +3,9 @@ public class KodeProv implements Kode{
     private String kode ;
     final String nama = "DKI Jakarta";
 
+    public KodeProv() {
+    }
+
     public KodeProv(String kode) {
         this.kode = "31";
     }

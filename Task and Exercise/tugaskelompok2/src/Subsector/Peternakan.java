@@ -2,6 +2,10 @@ package Subsector;
 
 public class Peternakan implements Usaha {
     private boolean Usaha;
+
+    public Peternakan() {
+    }
+
     public Peternakan(boolean peternakan) {
         this.Usaha = peternakan;
     }
@@ -17,6 +21,9 @@ public class Peternakan implements Usaha {
     @Override
     public boolean isUsaha() {
         return this.Usaha;
+    }
+    public void setUsaha(boolean usaha) {
+        Usaha = usaha;
     }
 }
     

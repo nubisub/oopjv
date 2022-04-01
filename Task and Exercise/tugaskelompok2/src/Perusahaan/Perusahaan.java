@@ -3,6 +3,8 @@ package Perusahaan;
 import DPP.DPP;
 import KIP.KIP;
 import Subsector.Subsector;
+// import Validate.Validate;
+// import Validate.ValidateKecamatan;
 
 public class Perusahaan {
     private String nama;
@@ -13,18 +15,22 @@ public class Perusahaan {
     private KIP kip;
     private DPP dpp;
     private Subsector subsector;
+    // private Validate validate;
 
-    // constructor
-    public Perusahaan(KIP kip, String nama, String alamat, String phone, String fax, int i, DPP dpp, Subsector subsector) {
-        this.kip = kip;
-        this.nama = nama;
-        this.alamat = alamat;
-        this.phone = phone;
-        this.fax = fax;
-        this.BBH = i;
-        this.dpp = dpp;
-        this.subsector = subsector;
+    public Perusahaan() {
+        this.kip = new KIP();
+        this.dpp = new DPP();
+        this.subsector = new Subsector();
     }
+
+    // public Validate getValidate() {
+    //     return validate;
+    // }
+
+
+    // public void setValidate(Validate validate) {
+    //     this.validate = validate;
+    // }
 
 
     public Subsector getSubsector() {
@@ -94,4 +100,6 @@ public class Perusahaan {
     public void setNama(String nama) {
         this.nama = nama;
     }
+
+
 }

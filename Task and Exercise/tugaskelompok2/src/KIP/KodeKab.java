@@ -3,6 +3,9 @@ public class KodeKab implements Kode{
     private String kode;
     private String nama;
 
+    public KodeKab() {
+    }
+
     public KodeKab(String kode) {
         this.kode = kode;
     }

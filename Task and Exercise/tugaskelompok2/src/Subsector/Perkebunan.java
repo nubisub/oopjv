@@ -2,6 +2,10 @@ package Subsector;
 
 public class Perkebunan implements Usaha {
     private String Usaha;
+
+    public Perkebunan() {
+    }
+
     public Perkebunan(String perkebunan) {
         switch (perkebunan) {
             case "3a":
@@ -54,6 +58,9 @@ public class Perkebunan implements Usaha {
         else {
             return false;
         }
+    }
+    public void setUsaha(String usaha) {
+        Usaha = usaha;
     }
     
 }

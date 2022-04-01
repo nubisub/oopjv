@@ -3,6 +3,10 @@ public class KodeKJU implements Kode{
     private String kode;
     private String nama;
 
+
+    public KodeKJU() {
+    }
+
     public KodeKJU(String kode) {
         this.kode = kode;
     }
