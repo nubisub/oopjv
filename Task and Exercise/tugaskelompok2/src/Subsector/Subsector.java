@@ -17,15 +17,6 @@ public class Subsector {
         this.peternakan = new Peternakan(peternakan);
     }
 
-    public Subsector() {
-        this.hortikultura = new Hortikultura();
-        this.tanamanPangan = new TanamanPangan();
-        this.perkebunan = new Perkebunan();
-        this.kehutanan = new Kehutanan();
-        this.perikanan = new Perikanan();
-        this.peternakan = new Peternakan();
-    }
-
     public Peternakan getPeternakan() {
         return peternakan;
     }

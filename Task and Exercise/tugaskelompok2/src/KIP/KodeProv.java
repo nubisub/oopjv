@@ -7,9 +7,6 @@ public class KodeProv implements Kode{
         this.kode = kode;
     }
 
-    public KodeProv() {
-    }
-
     @Override
     public void setKode(String kode) {
         this.kode = kode;

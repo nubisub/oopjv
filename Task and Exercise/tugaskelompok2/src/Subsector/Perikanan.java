@@ -5,9 +5,6 @@ public class Perikanan implements Usaha {
     public Perikanan(boolean perikanan) {
         this.Usaha = perikanan;
     }
-
-    public Perikanan() {
-    }
     @Override
     public String getSubsector() {
         if (isUsaha() == true){

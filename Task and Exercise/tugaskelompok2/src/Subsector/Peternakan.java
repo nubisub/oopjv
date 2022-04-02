@@ -6,8 +6,6 @@ public class Peternakan implements Usaha {
         this.Usaha = peternakan;
     }
 
-    public Peternakan() {
-    }
     @Override
     public String getSubsector() {
         if (isUsaha() == true){

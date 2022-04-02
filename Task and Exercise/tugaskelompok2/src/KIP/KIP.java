@@ -15,13 +15,6 @@ public class KIP {
         this.nourut = nourut;
         setKIP();
     }
-
-    public KIP() {
-        this.Prov = new KodeProv();
-        this.Kab = new KodeKab();
-        this.Kec = new KodeKec();
-        this.KJU = new KodeKJU();
-    }
     public KodeProv getProv() {
         return Prov;
     }

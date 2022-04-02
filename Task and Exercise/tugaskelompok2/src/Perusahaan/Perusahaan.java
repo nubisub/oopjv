@@ -27,17 +27,6 @@ public class Perusahaan {
         this.JenisUsahaUtama = JenisUsahaUtama;
     }
 
-    // public Perusahaan() {
-    //     this.kip = new KIP();
-    //     this.dpp = new DPP();
-    //     this.subsector = new Subsector();
-    // }
-
-
-    public Perusahaan(KIP kip2, DPP dpp2, Subsector subsector2, String nama2, String alamat2, String phone2,
-            String fax2, String bbh2) {
-    }
-
     public String getJenisUsahaUtama() {
         return JenisUsahaUtama;
     }

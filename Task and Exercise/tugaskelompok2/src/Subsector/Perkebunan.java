@@ -3,13 +3,6 @@ package Subsector;
 public class Perkebunan implements Usaha {
     private String Usaha;
 
-    // public Perkebunan(String perkebunan) {
-    //     this.Usaha = perkebunan;
-    // }
-    // private boolean binUsaha;
-
-    public Perkebunan() {
-    }
 
     public Perkebunan(String perkebunan) {
         this.Usaha = perkebunan;

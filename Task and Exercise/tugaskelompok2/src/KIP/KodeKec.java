@@ -6,10 +6,6 @@ public class KodeKec implements Kode {
     public KodeKec(String kode) {
         this.kode = kode;
     }
-
-    public KodeKec() {
-    }
-
     @Override
     public void setKode(String kode) {
         this.kode = kode;

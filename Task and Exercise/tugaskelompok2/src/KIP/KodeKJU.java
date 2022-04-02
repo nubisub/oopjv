@@ -7,9 +7,6 @@ public class KodeKJU implements Kode{
         this.kode = kode;
     }
 
-    public KodeKJU() {
-    }
-
     @Override
     public void setKode(String kode) {
         this.kode = kode;

@@ -6,9 +6,6 @@ public class TanamanPangan implements Usaha {
         this.Usaha = tanamanpangan;
     }
 
-    public TanamanPangan() {
-    }
-
     @Override
     public String getSubsector() {
         if (isUsaha() == true){

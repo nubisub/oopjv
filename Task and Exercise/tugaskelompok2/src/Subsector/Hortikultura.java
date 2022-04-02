@@ -5,8 +5,6 @@ public class Hortikultura implements Usaha {
     public Hortikultura(boolean hortikultura) {
         this.Usaha = hortikultura;
     }
-    public Hortikultura() {
-    }
     @Override
     public String getSubsector() {
         if (isUsaha() == true){
