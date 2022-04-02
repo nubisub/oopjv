@@ -9,16 +9,33 @@ public class Perusahaan {
     private String alamat;
     private String phone;
     private String fax;
-    private int BBH;
+    private String BBH;
     private KIP kip;
     private DPP dpp;
     private Subsector subsector;
     private String JenisUsahaUtama;
 
-    public Perusahaan() {
-        this.kip = new KIP();
-        this.dpp = new DPP();
-        this.subsector = new Subsector();
+    public Perusahaan(KIP kip, DPP dpp, Subsector subsector, String nama, String alamat, String phone, String fax, String BBH,String JenisUsahaUtama) {
+        this.kip = kip;
+        this.dpp = dpp;
+        this.subsector = subsector;
+        this.nama = nama;
+        this.alamat = alamat;
+        this.phone = phone;
+        this.fax = fax;
+        this.BBH = BBH;
+        this.JenisUsahaUtama = JenisUsahaUtama;
+    }
+
+    // public Perusahaan() {
+    //     this.kip = new KIP();
+    //     this.dpp = new DPP();
+    //     this.subsector = new Subsector();
+    // }
+
+
+    public Perusahaan(KIP kip2, DPP dpp2, Subsector subsector2, String nama2, String alamat2, String phone2,
+            String fax2, String bbh2) {
     }
 
     public String getJenisUsahaUtama() {
@@ -57,11 +74,11 @@ public class Perusahaan {
         this.kip = kip;
     }
 
-    public int getBBH() {
+    public String getBBH() {
         return BBH;
     }
 
-    public void setBBH(int bBH) {
+    public void setBBH(String bBH) {
         this.BBH = bBH;
     }
 

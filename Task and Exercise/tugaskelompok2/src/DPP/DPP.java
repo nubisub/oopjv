@@ -3,6 +3,10 @@ public class DPP {
     private boolean isDone;
     private String status;
 
+    public DPP(boolean isDone, String status) {
+        this.isDone = isDone;
+        this.status = status;
+    }
     public DPP() {
     }
     public String getStatus() {

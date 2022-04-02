@@ -3,6 +3,10 @@ public class KodeKec implements Kode {
     private String kode;
     private String nama;
 
+    public KodeKec(String kode) {
+        this.kode = kode;
+    }
+
     public KodeKec() {
     }
 

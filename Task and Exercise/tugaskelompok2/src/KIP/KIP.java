@@ -7,6 +7,15 @@ public class KIP {
     private int nourut;
     private String KIP;
 
+    public KIP(KodeProv kodeProv, KodeKab kodeKab, KodeKec kodeKec, KodeKJU kodeKJU, int nourut) {
+        this.Prov = kodeProv;
+        this.Kab = kodeKab;
+        this.Kec = kodeKec;
+        this.KJU = kodeKJU;
+        this.nourut = nourut;
+        setKIP();
+    }
+
     public KIP() {
         this.Prov = new KodeProv();
         this.Kab = new KodeKab();

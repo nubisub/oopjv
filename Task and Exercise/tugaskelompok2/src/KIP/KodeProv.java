@@ -3,6 +3,10 @@ public class KodeProv implements Kode{
     private String kode ;
     private String nama;
 
+    public KodeProv(String kode) {
+        this.kode = kode;
+    }
+
     public KodeProv() {
     }
 

@@ -2,6 +2,9 @@ package Subsector;
 
 public class Kehutanan implements Usaha{
     private boolean Usaha;
+    public Kehutanan(boolean kehutanan) {
+        this.Usaha = kehutanan;
+    }
 
     public Kehutanan() {
     }
