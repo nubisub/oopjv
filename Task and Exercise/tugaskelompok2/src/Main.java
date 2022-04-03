@@ -26,6 +26,7 @@ import Validate.ValidateStatusDpp;
 
 public class Main {
     static void tampilMenu(ArrayList<Perusahaan> p) {
+        
         boolean quit = false;
         Validate Kec = new ValidateKecamatan();
         Validate Kab = new ValidateKabupaten();
@@ -122,7 +123,7 @@ public class Main {
                 // DPP
                 System.out.println("Pencacahan Kuesioner Rutin/DPP");
                     do {
-                        System.out.print("Sudah Dikunjungi?  : ");
+                        System.out.print("Sudah Dikunjungi? : ");
                     isDone = input.nextLine();
                         if (biner.isValid(isDone)) {
                             break;
@@ -131,7 +132,7 @@ public class Main {
 
                 // Status DPP                    
                     do {
-                        System.out.print("Status         : ");
+                        System.out.print("Status            : ");
                      status = input.nextLine();
                         if (statuscheck.isValid(status)) {
                             break;
@@ -145,21 +146,21 @@ public class Main {
                     System.out.print("Alamat Perusahaan : ");
                      alamat = input.nextLine();
                 // Nomor Telepon Perusahaan
-                    do {
+                    // do {
                         System.out.print("No. Telepon       : ");
                      phone = input.nextLine();
-                         if (telp.isValid(phone)) {
-                            break;
-                        }
-                    } while (true);
+                    //      if (telp.isValid(phone)) {
+                    //         break;
+                    //     }
+                    // } while (true);
                 // Fax Perusahaan
-                    do {
-                        System.out.print("No. Faximile       : ");
+                    // do {
+                        System.out.print("No. Faximile      : ");
                      fax = input.nextLine();
-                        if (telp.isValid(fax)) {
-                            break;
-                        }
-                    } while (true);
+                    //     if (telp.isValid(fax)) {
+                    //         break;
+                    //     }
+                    // } while (true);
                 // BBH
                     do {
                         System.out.print("BBH               : ");
@@ -172,10 +173,10 @@ public class Main {
 
                 
 
-
+                System.out.println("Subsektor");
                 // Input Subsector
                     do {
-                        System.out.print("Tanaman Pangan      : ");
+                        System.out.print("Tanaman Pangan   : ");
                         tanamanPangan = input.nextLine();
                         if (biner.isValid(tanamanPangan)) {
                             break;
@@ -183,7 +184,7 @@ public class Main {
                     } while (true);
                     
                     do {
-                        System.out.print("Hortikultura : ");
+                        System.out.print("Hortikultura     : ");
                         hortikultura = input.nextLine();
                         if (biner.isValid(hortikultura)) {
                             break;
@@ -191,7 +192,7 @@ public class Main {
                     } while (true);
 
                     do {
-                        System.out.print("Perkebunan : ");
+                        System.out.print("Perkebunan       : ");
                         perkebunan = input.nextLine(); 
                         if (perkebunancheck.isValid(perkebunan)) {
                             break;
@@ -199,7 +200,7 @@ public class Main {
                     } while (true);
                     
                     do {
-                        System.out.print("Peternakan : ");
+                        System.out.print("Peternakan       : ");
                     peternakan = input.nextLine();
                         if (biner.isValid(peternakan)) {
                             break;
@@ -207,7 +208,7 @@ public class Main {
                     } while (true);
 
                     do {
-                        System.out.print("Kehutanan : ");
+                        System.out.print("Kehutanan        : ");
                     kehutanan = input.nextLine();
                         if (biner.isValid(kehutanan)) {
                             break;
@@ -215,13 +216,14 @@ public class Main {
                     } while (true);
 
                     do {
-                        System.out.print("Perikanan : ");
+                        System.out.print("Perikanan        : ");
                         perikanan = input.nextLine();
                         if (biner.isValid(perikanan)) {
                             break;
                         }
                     } while (true);
 
+                    System.out.println("Jenis Usaha Utama");
                     do {
                         System.out.print("Jenis Usaha Utama: ");
                     jenisUsahaUtama = input.nextLine();
