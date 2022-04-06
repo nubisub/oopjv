@@ -1,3 +1,10 @@
+// 1.	Abdullah Ridwan	    222011352
+// 2.	Navika Artiari		222011358
+// 3.	Thomson		        222011365
+// 4.	Hendra Kusuma	    222011395
+// 5.	Rafel Ilham Febrian	222011407
+
+
 import java.util.ArrayList; // import the ArrayList class
 
 import java.util.Scanner;
@@ -11,7 +18,6 @@ import KIP.KodeProv;
 import Perusahaan.Perusahaan;
 import Subsector.Subsector;
 import Validate.Validate;
-import Validate.Validatephone;
 import Validate.ValidateBBH;
 import Validate.ValidateBoolean;
 import Validate.ValidateJenisUsahaUtama;
@@ -21,7 +27,6 @@ import Validate.ValidateKecamatan;
 import Validate.ValidateKecamatanJak;
 import Validate.ValidateNoUrut;
 import Validate.ValidatePerkebunan;
-import Validate.ValidateProv;
 import Validate.ValidateStatusDpp;
 
 public class Main {
@@ -32,12 +37,10 @@ public class Main {
         Validate Kab = new ValidateKabupaten();
         Validate KJU = new ValidateKJU();
         Validate NoUrut = new ValidateNoUrut();
-        Validate telp = new Validatephone();
         Validate biner = new ValidateBoolean();
         Validate perkebunancheck = new ValidatePerkebunan();
         Validate bbhcheck = new ValidateBBH();
         Validate statuscheck = new ValidateStatusDpp();
-        Validate Prov = new ValidateProv();
         Validate jenisusahautama = new ValidateJenisUsahaUtama();
         Validate jakarta;
         String kodeProv;
@@ -76,14 +79,10 @@ public class Main {
                     
                     // Kode Provinsi
                     System.out.println("Kode Identitas Perusahaan");
-                    while (true) {
                         System.out.print("Kode Provinsi   : ");
                         System.out.println("31");
                          kodeProv = "31";
-                        if (Prov.isValid(kodeProv)) {
-                            break;
-                        }
-                    }
+                    
 
                     // Kode Kabupaten
                     do {
@@ -277,7 +276,7 @@ public class Main {
                     break;
             }
             
-        } while (quit == false);
+        } while (!quit);
     }
     public static void main(String[] args) {
         ArrayList<Perusahaan> p = new ArrayList();
