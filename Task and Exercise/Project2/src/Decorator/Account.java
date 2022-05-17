@@ -34,10 +34,11 @@ public class Account {
         this.username = username;
     }
 
-    public void post(String notification) {
+    public void tweet(String tweet) {
+        System.out.println("Tweet: " + tweet);
         for (Notify n : notifyfollower) {
             System.out.println(getUsername() + " Just Tweeted: ");
-            n.notify(notification);
+            n.notify(tweet);
         }
     }
 

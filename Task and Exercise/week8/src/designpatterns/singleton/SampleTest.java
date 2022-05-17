@@ -20,8 +20,4 @@ public class SampleTest {
         this.sample = sample;
         Singleton.getInstance().setSample(sample);
     }
-    
-    
-    
-    
 }

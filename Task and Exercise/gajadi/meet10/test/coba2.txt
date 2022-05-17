@@ -1,0 +1,6 @@
+Hasil Proses Text
+=================
+Jumlah Karakter (di luar spasi) : 
+Jumlah Baris : 
+Jumlah Huruf Vokal : 
+Jumlah Huruf Konsonan : 

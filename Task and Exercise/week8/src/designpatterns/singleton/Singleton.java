@@ -32,5 +32,4 @@ public class Singleton {
     public String getSample() {
         return sample;
     }
-    
 }

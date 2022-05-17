@@ -5,24 +5,24 @@ public class App {
         // Create a new account
         Account realDonaldTrump = new Account("Donald Trump");
 
+        
         // Create three followers account
         Follower follower1 = new Follower();
         Follower follower2 = new Follower();
         Follower follower3 = new Follower();
 
-
         // Followers click "notify" button
         realDonaldTrump.addNotifyfollower(follower1);
         realDonaldTrump.addNotifyfollower(follower2);
-        realDonaldTrump.addNotifyfollower(follower3);
 
         // Notify followers
-        realDonaldTrump.post("Make America Great Again!");
+        realDonaldTrump.tweet("Make America Great Again!");
 
         Notifier notifier = new Basic();
 
+        // where to notif ?
         boolean email = true;
-        boolean sms = true;
+        boolean sms = false;
 
         if (email) {
             notifier = new Email(notifier);
@@ -31,10 +31,13 @@ public class App {
             notifier = new Sms(notifier);
         }
 
+        // make second account
         Account JoeBiden = new Account("Joe Biden");
 
+        // set notifier
         realDonaldTrump.setNotifier(notifier);
+
+        // JoeBiden mention Donald Trump
         realDonaldTrump.mentionedby(JoeBiden);
-        // realDonaldTrump.sendNotification("sd");
     }
 }
