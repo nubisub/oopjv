@@ -62,7 +62,13 @@ public class databaseConnection {
     System.out.println(provinsi);
 
     // coba2 = "coba2";
+    // coba pake prepare statement (sql injection)
     String sql = "INSERT INTO mahasiswa (nim, nama, sex, umur, alamat, provinsi) VALUES ('" + nim + "', '" + nama + "','" + sex + "','" + umur + "', '" + alamat + "','" + provinsi + "')";
+
+    // prepared statement 
+    // PreparedStatement pstmt = conn.PreparedStatement(sql);
+
+
     // String sql = "INSERT INTO mahasiswa (nim) VALUES ('"+coba2+"') ";
     stmt.executeUpdate(sql);
     ArrayList<String> hobi = mahasiswa.getHobi();

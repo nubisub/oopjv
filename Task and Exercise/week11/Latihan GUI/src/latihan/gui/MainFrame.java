@@ -94,21 +94,20 @@ LoginPanel(contentScrollPane));
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        String username = session.getInstance().getUsername();
-
+        String username = latihan.gui.session.getInstance().getUsername();
+        System.out.println(username);
         if (username == "") {
             JOptionPane.showMessageDialog(this, "Anda harus login terlebih dahulu");
-
         } else {
             contentScrollPane.setViewportView(new HomePanel());
-
         }
         // contentScrollPane.setViewportView(new HomePanel());
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        String username = session.getInstance().getUsername();
+        String username = latihan.gui.session.getInstance().getUsername();
+        System.out.println(username);
         // if username not null
         if (username == "") {
             JOptionPane.showMessageDialog(this, "Anda harus login terlebih dahulu");

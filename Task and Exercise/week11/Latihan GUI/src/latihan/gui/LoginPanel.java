@@ -130,11 +130,13 @@ private session session;
         if (resultSet.next()) {
             System.out.println("Login Successful");
             contentScrollPane.setViewportView(new HomePanel());
+            latihan.gui.session.getInstance().setUsername(jTextField1.getText());
+            ;
+
         } else {
             // System.out.println("Login Failed");
             JOptionPane.showMessageDialog(this, "Login Failed");
             // session.setUsername(jTextField1.getText());
-            session.getInstance().setUsername(jTextField1.getText());;
         }
         
         } catch (SQLException e) {
