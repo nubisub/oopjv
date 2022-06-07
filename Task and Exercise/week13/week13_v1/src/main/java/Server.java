@@ -19,11 +19,13 @@ public class Server {
             Chat chatSession = new Chat(bot);
             while (true) {
                 String data = terimaClient.readLine();
-                String response = chatSession.multisentenceRespond(data);
+
                 if (data.equals("exit")) {
                     ps.print("Terima kasih, semoga harimau");
                     break;
                 }
+                String response = chatSession.multisentenceRespond(data);
+
                 ps.println(response);
             }
             socket.close();

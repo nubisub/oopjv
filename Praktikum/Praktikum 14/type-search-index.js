@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"LatihanClient"},{"p":"<Unnamed>","l":"LatihanServer"},{"p":"<Unnamed>","l":"Pesan"},{"p":"<Unnamed>","l":"ServerThread"}];updateSearchResults();
