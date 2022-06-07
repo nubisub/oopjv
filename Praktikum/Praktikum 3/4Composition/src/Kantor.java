@@ -24,14 +24,14 @@ public class Kantor {
         // System.out.println("gaji orang paul : " + paul.getGaji());
         // System.out.println("gaji orang allen : " + allen.getGaji());
 
-        Gedung STIS = new Gedung();
-        STIS.addRuang("Lobi");
-        STIS.addRuang("Bagian Umum");
-        STIS.addRuang("Kepala Kantor");
+        Gedung Kampus = new Gedung();
+        Kampus.addRuang("Lobi");
+        Kampus.addRuang("Bagian Umum");
+        Kampus.addRuang("Kepala Kantor");
 
-        List<Ruang> ruangan = STIS.getDaftarRuang();
+        List<Ruang> ruangan = Kampus.getDaftarRuang();
         
-        System.out.println("Ruangan di STIS :");
+        System.out.println("Ruangan di Kampus :");
         for (Ruang ruang : ruangan) {
             System.out.println(ruang.getNamaRuang());
         }
