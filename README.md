@@ -1,4 +1,11 @@
 # OOP with JAVA
+
+[![wakatime](https://wakatime.com/badge/user/ab053e7a-29dd-45e7-8ba6-5eaad830906f/project/b484dd45-38d5-4885-bf3d-cf0a127cd50a.svg)](https://wakatime.com/badge/user/ab053e7a-29dd-45e7-8ba6-5eaad830906f/project/b484dd45-38d5-4885-bf3d-cf0a127cd50a)
+
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
+![NetBeans IDE](https://img.shields.io/badge/NetBeansIDE-1B6AC6.svg?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 ## Praktikum
 > [`01. Intro`](Praktikum/Praktikum%201)   
 > [`02. IDE`](Praktikum/Praktikum%202)     
